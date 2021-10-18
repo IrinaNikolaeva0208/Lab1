@@ -7,8 +7,8 @@ public class Cheese extends Food {
 	}
 
 	@Override
-	public void consume() {
-		System.out.println(this+" was eaten");
+	public void consume(int count) {
+		System.out.println(this+" was eaten "+count+ " times");
 	}
 
 }
