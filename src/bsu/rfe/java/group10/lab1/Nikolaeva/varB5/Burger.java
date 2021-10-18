@@ -34,6 +34,22 @@ private String size;
 		return "A "+super.toString()+" of '"+size.toUpperCase()+"' size";
 	}
 
+	@Override
+	public int calculateCalories() {
+		int calories=0;
+		switch(size) {
+		case "big":
+			calories=528;
+			break;
+		case "average":
+			calories=396;
+			break;
+		case "small":
+			calories=264;
+			break;
+		}
+		return calories;
+	}
 	
 	
 

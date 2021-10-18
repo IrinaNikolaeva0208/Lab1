@@ -11,4 +11,9 @@ public class Cheese extends Food {
 		System.out.println(this+" was eaten "+count+ " times");
 	}
 
+	@Override
+	public int calculateCalories() {
+		return 350;
+		
+	}
 }
