@@ -28,4 +28,4 @@ public abstract class Food implements Consumable {
 
 	}
 
-}
+
