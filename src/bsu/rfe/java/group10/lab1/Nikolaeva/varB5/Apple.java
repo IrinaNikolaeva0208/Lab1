@@ -19,7 +19,7 @@ public String size;
 
 	@Override
 	public void consume() {
-		System.out.println(this+" was eaten ");
+		System.out.println(this+" was eaten");
 	}
 
 	@Override
