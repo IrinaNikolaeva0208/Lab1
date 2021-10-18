@@ -4,7 +4,7 @@ public class MainApplication {
 
 	public static void main(String[] args) throws Exception {
 		Food[] breakfast = new Food[20];
-		int itemsSoFar = 0, count=0;
+		int itemsSoFar = 0, count=1;
 		boolean SameItem=false;
 		for (String arg: args) {
 			  String[] parts = arg.split("/");
@@ -44,8 +44,24 @@ public class MainApplication {
 		} else
 		   break;
 		
-		System.out.println("Have a nice day!");
+		for(String arg : args) {
+			if(arg!=null)
+			switch (arg) {
+			case "-calories":
+				int calories=0;
+			for(Food item: breakfast) {
+				if(item!=null)
+				calories+=item.calculateCalories();
+			}
+			System.out.println("The breakfast contains "+calories+" calories");	
+			break;
+			default:
+			break;
+
+			}	
+		
 	    }
+		System.out.println("Have a nice day!");
 }
 	
-
+}
