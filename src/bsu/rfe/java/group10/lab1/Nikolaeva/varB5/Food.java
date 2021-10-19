@@ -15,17 +15,24 @@ public abstract class Food implements Consumable, Nutritious {
 			if (name==null || ((Food)arg0).name==null) return false;
 			return name.equals(((Food)arg0).name);
 	}
+		
 	@Override
 	public String toString() {
 		return name;
 	}
+	
 		public String getName() {
 		return name;
 	}
+		
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
+	public String getSize() {
+		return null;
 	}
+
+}
 
 

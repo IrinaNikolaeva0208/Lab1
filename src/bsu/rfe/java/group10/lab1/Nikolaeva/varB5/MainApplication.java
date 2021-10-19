@@ -1,5 +1,7 @@
 package bsu.rfe.java.group10.lab1.Nikolaeva.varB5;
 
+import java.util.Arrays;
+
 public class MainApplication {
 
 	public static void main(String[] args) throws Exception {
@@ -40,27 +42,31 @@ public class MainApplication {
 		    		  SameItem=false;
 		    		  continue;
 		    	  }
-		      
-		} else
-		   break;
+		      } else
+		           break;
 		
 		for(String arg : args) {
 			if(arg!=null)
-			switch (arg) {
-			case "-calories":
-				int calories=0;
-			for(Food item: breakfast) {
-				if(item!=null)
-				calories+=item.calculateCalories();
-			}
-			System.out.println("The breakfast contains "+calories+" calories");	
+			    switch (arg) {
+		     	case "-sort":
+				    Arrays.sort(breakfast, new FoodComparator());
+				    break;
+		    	case "-calories":
+				    int calories=0;
+		    	    for(Food item: breakfast) {
+				        if(item!=null)
+				        calories+=item.calculateCalories();
+		    	}
+			        System.out.println("The breakfast contains "+calories+" calories");	
 			break;
 			default:
 			break;
-
-			}	
-		
+			}			
 	    }
+		System.out.println("\nSorted breakfast:");
+		for(Food item: breakfast)
+			if(item!=null)
+				System.out.println(item.toString());
 		System.out.println("Have a nice day!");
 }
 	
